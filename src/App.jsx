@@ -30,7 +30,7 @@ function App() {
         <div className='text-3xl text-gray-50 mb-2'>
             Calculator
         </div>
-        <div className='grid grid-cols-4 grid-rows-5 gap-1'>
+        <div className='grid grid-cols-4 grid-rows-5 gap-1 [&>*]:transition-colors [&>*]:duration-[100ms]'>
             <div className='row-span-1 text-3xl font-bold bg-gray-700 rounded text-white col-span-full flex items-center'>
                 <div className='pl-4'>
                     {expression()}

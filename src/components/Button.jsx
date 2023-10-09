@@ -26,7 +26,7 @@ export function BackspaceButton(props) {
     }
 
     return(
-        <button onClick={backspace} className={buttonStyle + "bg-gray-700 hover:bg-red-400 active:bg-red-500 " + props.style}>⌫</button>
+        <button onClick={backspace} className={buttonStyle + "bg-gray-700 hover:bg-red-500 active:bg-red-600 " + props.style}>⌫</button>
     )
 }
 
@@ -34,7 +34,7 @@ export function BackspaceButton(props) {
 //  setExpression: function called when enter is pressed
 export function ClearButton(props) {
     return(
-        <button onClick={() => props.setExpression('')} className={buttonStyle + "bg-gray-700 hover:bg-red-400 active:bg-red-500 " + props.style}>AC</button>
+        <button onClick={() => props.setExpression('')} className={buttonStyle + "bg-gray-700 hover:bg-red-500 active:bg-red-600 " + props.style}>AC</button>
     )
 }
 
