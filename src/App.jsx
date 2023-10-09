@@ -26,7 +26,7 @@ function App() {
     }
 
     return (
-    <div className='m-4 max-w-md'>
+    <div className='p-4 mx-auto max-w-lg'>
         <div className='text-3xl text-gray-50 mb-2'>
             Calculator
         </div>
