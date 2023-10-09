@@ -16,6 +16,14 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; 
 }
 
+*::-webkit-scrollbar {
+  width: 0.25em;
+}
+ 
+*::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+  border-radius: .25em;
+}

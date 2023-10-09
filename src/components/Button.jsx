@@ -4,11 +4,11 @@ const buttonStyle = 'p-4 text-white text-lg font-bold rounded outline-none '
 
 // props
 //  value: value used and displayed on button
-//  setExpression: callback function used to update expression
+//  setExpression: function used to update expression
 //  expression: current expression value
 export function Button(props) {
     return (
-        <button onClick={() => props.setExpression(props.expression() + props.value)} className={buttonStyle + "bg-gray-800 hover:bg-blue-700 active:bg-blue-800 " + props.style}>
+        <button onClick={props.callback} className={buttonStyle + "bg-gray-800 hover:bg-blue-700 active:bg-blue-800 " + props.style}>
             {props.value}
         </button>
     )
@@ -16,17 +16,11 @@ export function Button(props) {
 
 
 // props:
-//  setExpression: function called when enter is pressed
+//  setExpression: function used to update expression
+//  expression: current expression value function
 export function BackspaceButton(props) {
-    const backspace = function () {
-        const expression = props.expression()
-        if (!(expression === undefined || expression.length == 0)) {
-            props.setExpression(expression.substring(0, expression.length-1))
-        }
-    }
-
     return(
-        <button onClick={backspace} className={buttonStyle + "bg-gray-700 hover:bg-red-500 active:bg-red-600 " + props.style}>⌫</button>
+        <button onClick={props.callback} className={buttonStyle + "bg-gray-700 hover:bg-red-500 active:bg-red-600 " + props.style}>⌫</button>
     )
 }
 
@@ -34,7 +28,7 @@ export function BackspaceButton(props) {
 //  setExpression: function called when enter is pressed
 export function ClearButton(props) {
     return(
-        <button onClick={() => props.setExpression('')} className={buttonStyle + "bg-gray-700 hover:bg-red-500 active:bg-red-600 " + props.style}>AC</button>
+        <button onClick={props.callback} className={buttonStyle + "bg-gray-700 hover:bg-red-500 active:bg-red-600 " + props.style}>AC</button>
     )
 }
 
