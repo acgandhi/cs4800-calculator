@@ -46,7 +46,7 @@ function handleKeyboardPress(event, expression, setExpression) {
     if (buttons.includes(key)) {
         handleButton(key, expression, setExpression)
     }
-    else if (key == "Enter" || key == "=") {
+    else if (key == "=") {
         evaluate(expression, setExpression)
     }
     else if (key == "Backspace") {
