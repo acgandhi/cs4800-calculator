@@ -1,6 +1,5 @@
 import { For, createSignal, createEffect } from 'solid-js'
 import { BackspaceButton, Button, ClearButton, EnterButton } from './components/Button.jsx'
-import { useKeyDownEvent } from "@solid-primitives/keyboard";
 import './index.css'
 
 const buttons = ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '+']
